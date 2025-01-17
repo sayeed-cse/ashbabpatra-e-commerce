@@ -1,3 +1,494 @@
-body{
-    font-weight: semibold;
+/* fira-sans and poppin font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #E89F72;
+    --secondary: #fad1b8;
+    --light: #fde4d6;
+    --lighter: #fdf0e8;
+    --lightest: #fdf9f7;
+    --dark: #0a0a0a;
+    --gray: #535353;
+    --light-gray: #fffdfd;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--lightest);
+    font-family: "Poppins", serif;
+
+}
+
+.navbar {
+    background-color: var(--light);
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .nav-logo {
+    height: 80px;
+}
+
+.navbar .nav {
+    display: flex;
+}
+
+.nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin-right: 100px;
+}
+
+.nav-links .nav-link {}
+
+.nav .nav-links .nav-link .link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--dark);
+    padding: 8px 16px;
+}
+
+.nav .nav-links .nav-link .link:hover {
+    background-color: var(--secondary);
+}
+
+.nav .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav .nav-icons a {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.nav .nav-icons a:hover {
+    background-color: var(--secondary);
+}
+
+.nav .nav-icons i {
+    font-size: 24px;
+}
+
+/* .banner-section start */
+.banner-section {
+    margin-top: 100px;
+    position: relative;
+}
+
+.banner-section .card {
+    width: 450px;
+    padding: 40px;
+    background-color: #ffffff;
+    font-family: "Fira Sans", serif;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    left: 60px;
+    top: -60px;
+    z-index: 20;
+    opacity: .9;
+
+}
+
+.banner-section .card h3 {
+    font-size: 48px;
+    line-height: 60px;
+    color: rgb(70, 65, 65);
+}
+
+.banner-section .card p {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: gray;
+
+}
+
+.banner-section .slider-images {}
+
+.banner-section .slider-images .slide img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* banner slider */
+.banner-section .slider-dots .dots {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+    margin-bottom: 24px;
+
+}
+
+.banner-section .slider-dots button {
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    background: var(--primary);
+    border-radius: 50px;
+    transition: all .5s ease;
+    cursor: grab;
+
+}
+
+
+.banner-section .slider-dots .slick-active button {
+    background: var(--secondary);
+    border: 2px solid var(--primary);
+    box-shadow: 0px 0px 5px gray;
+}
+
+/* -------------------------------------- */
+/* .slick-prev .slick-arrow {
+        display: none;
+    } */
+
+/* slogan start */
+.our-slogans {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 40px 0;
+
+}
+
+.our-slogans .slogan {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--light);
+    padding: 16px 20px;
+
+}
+
+.our-slogans .slogan img {
+    width: 72px;
+}
+
+.our-slogans .slogan h6 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.our-slogans .slogan p {
+    margin-top: 8px;
+}
+
+/* slogan end */
+/* .banner-section start */
+
+/* our products section style start */
+.our-products {
+    background-color: #ffffff;
+
+}
+
+.our-products .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.our-products .cards .card {
+    background-color: var(--lighter);
+    box-shadow: 0 0 2px rgb(231, 231, 231);
+
+}
+
+.our-products .cards .card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.our-products .cards .card .p-md {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.products-nav-btn {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+}
+
+.products-nav-btn .btn-primary-outline {
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+/* our products section style end */
+/* .room-ideas style start */
+.room-ideas-section {
+    background-color: var(--lighter);
+    display: flex;
+    align-items: center;
+
+}
+
+.room-ideas-section .room-ideas-titles {
+    /* flex: 1; */
+    width: 500px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.room-ideas-section .room-ideas-titles p {
+    margin-bottom: 24px;
+    width: 400px;
+}
+
+.room-ideas-section .room-ideas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    overflow: hidden;
+    max-height: 650px;
+}
+
+.room-idea-slides {
+    width: 100%;
+}
+
+.room-ideas-section .room-idea-slides .slide.slick-active {
+    height: 600px;
+}
+
+.room-ideas-section .room-idea-slides .slide {
+    width: 450px !important;
+    height: 500px;
+    transition: all .5s ease;
+}
+
+
+
+.room-ideas-section .room-idea-slides img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* room ideas slider */
+.room-ideas-section .ideas-slider-dots .dots {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    position: relative;
+    bottom: -550px;
+    left: 50px;
+}
+
+.room-ideas-section .ideas-slider-dots button {
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    background: var(--primary);
+    border-radius: 50px;
+    transition: all .5s ease;
+    cursor: grab;
+}
+
+
+.room-ideas-section .ideas-slider-dots .slick-active button {
+    background: var(--secondary);
+    border: 2px solid var(--primary);
+    box-shadow: 0px 0px 5px gray;
+}
+
+/* .room-ideas style end */
+
+/* .tips and tricks style start */
+
+/* room ideas slider */
+.tips-trick-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tips-trick-section .tips-tricks-slides {
+    width: 100%;
+}
+
+.tips-trick-section .tips-tricks-slides .slide {}
+
+.tips-trick-section .tips-tricks-slides .card {
+    background-color: var(--lighter);
+    border-radius: 16px;
+    margin-right: 20px;
+    min-height: 600px;
+    box-shadow: 0px 0px 5px var(--light);
+}
+
+.tips-trick-section .tips-tricks-slides .slide div {
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.tips-trick-section .tips-tricks-slides .slide div .btn-primary {
+    border-radius: 8px;
+}
+
+.tips-trick-section .tips-tricks-slides .slide img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.tips-trick-section .tips-slider-dots .dots {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.tips-trick-section .tips-slider-dots button {
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    background: var(--gray);
+    border-radius: 50px;
+    transition: all .5s ease;
+    cursor: grab;
+}
+
+.tips-trick-section .tips-slider-dots .slick-active button {
+    background: var(--secondary);
+    border: 2px solid var(--primary);
+    box-shadow: 0px 0px 5px gray;
+}
+
+/* .tips and tricks style end */
+
+/* share your furniture style start */
+.share-your-setup-section {}
+
+.share-titles .title {
+    padding: 10px 0;
+}
+
+.share-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-titles i {
+    font-size: 48px;
+    vertical-align: text-top;
+}
+
+.share-titles img {
+    background-color: var(--secondary);
+    box-shadow: 2px 2px 16px var(--secondary);
+    border-radius: 10px;
+}
+
+.share-your-setup-section .carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(6,1fr); */
+    /* grid-template-rows: repeat(2,1fr); */
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    grid-gap: 16px;
+}
+
+.share-your-setup-section .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 8px var(--primary);
+}
+
+.carousel .wide {
+    grid-column: span 2;
+}
+
+.carousel .long {
+    grid-row: span 2;
+}
+
+.carousel .longer {
+    grid-row: span 3;
+}
+
+/* share your furniture style end */
+
+/* footer style start */
+.footer-section {
+    background-color: var(--secondary);
+    margin-top: 40px;
+
+}
+
+.footer-section .container {
+    padding: 80px;
+
+}
+
+.footer-section .container .contents {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--gray);
+}
+
+.footer-section .container .contents div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.footer-section .container .contents img {
+    height: 50px;
+}
+
+.footer-section .container .contents a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.footer-section .container .contents a:hover {
+    color: var(--dark);
+}
+
+/* footer style end */

@@ -1,0 +1,70 @@
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 20px;
+    background-color: var(--primary);
+    padding: 16px 24px;
+    text-align: center;
+
+}
+.btn-primary-outline{
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 20px;
+    border:1px solid var(--primary);
+    padding: 16px 24px;
+}
+.title {
+    font-size: 42px;
+    font-weight: 600;
+    padding: 40px 0 32px 0;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.text-lg {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-sm {
+    font-size: 14px;
+    font-size: 400;
+}
+
+.text-gray {
+    color: var(--gray);
+}
+
+.text-dark {
+    color: var(--dark)
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-lg {
+    padding: 32px 24px;
+}
+
+.p-md {
+    padding: 28px 20px;
+}
+
+.p-sm {
+    padding: 24px 16px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
