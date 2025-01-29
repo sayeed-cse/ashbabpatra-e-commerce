@@ -166,8 +166,10 @@ body {
 .our-slogans {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 24px;
     margin: 40px 0;
+
 
 }
 
@@ -396,7 +398,9 @@ body {
 /* .tips and tricks style end */
 
 /* share your furniture style start */
-.share-your-setup-section {}
+.share-your-setup-section {
+    margin: 80px 0;
+}
 
 .share-titles .title {
     padding: 10px 0;
@@ -407,24 +411,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .share-titles i {
     font-size: 48px;
     vertical-align: text-top;
+    margin-bottom: 5px;
 }
 
 .share-titles img {
-    background-color: var(--secondary);
-    box-shadow: 2px 2px 16px var(--secondary);
+    background-color: var(--lighter);
+    border: 2px solid var(--light);
+    /* box-shadow: 2px 2px 16px var(--secondary); */
     border-radius: 10px;
+    transform: rotate(-5deg);
+    margin-left: 350px;
 }
 
 .share-your-setup-section .carousel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* grid-template-columns: repeat(6,1fr); */
-    /* grid-template-rows: repeat(2,1fr); */
     grid-auto-rows: 250px;
     grid-auto-flow: dense;
     grid-gap: 16px;
@@ -489,6 +496,35 @@ body {
 
 .footer-section .container .contents a:hover {
     color: var(--dark);
+}
+
+.footer-section .News-letter {
+    display: flex;
+}
+
+.footer-section .News-letter input {
+    padding: 12px 24px;
+    border: 0;
+    font-size: 16px;
+}
+
+.footer-section .News-letter input[type="email"] {
+    border-radius: 8px 0px 0px 8px;
+    border: 0;
+}
+
+.footer-section .News-letter input[type="email"]:focus {
+    outline: none;
+    color: #535353;
+}
+
+.footer-section .News-letter .submit-btn {
+    border-radius: 0px 8px 8px 0px;
+    font-weight: 600;
+}
+
+.footer-section .News-letter .submit-btn:hover {
+    background-color: var(--primary);
 }
 
 /* footer style end */
